@@ -1,5 +1,5 @@
-# DeepLearning
-My Progress in Deep Learning
+# DeepLearning projects overview
+
 
 
 ----------------------------

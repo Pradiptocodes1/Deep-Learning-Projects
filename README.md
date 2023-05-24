@@ -1,5 +1,5 @@
-# Deep-Learning-Projects
-Repository of my deep learning projects in Computer Vision
+# DeepLearning
+My Progress in Deep Learning
 
 
 ----------------------------

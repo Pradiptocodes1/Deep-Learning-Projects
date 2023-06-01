@@ -20,3 +20,8 @@ GradCAM basically takes the feature maps produced by the output layer of CNN, ad
 2. ScoreCAM - Gradient free method. Time taking Visualization. cuda GPUs recommended.<br>
 3. FasterScoreCAM - Quicker visualization than ScoreCAM<br>
 Used tensorflow coupled with keras, for the minority of the syntaxes, on a pretrained ImageNet dataset utilising the 16-layered VGG-16 convolutional model. 
+
+-----------------------------
+3D Liver Tumour Segmentation
+------------------------------
+Took a dataset containing multiple CT scan images and labels of livers. Used necesasary prprocessing and augmentations(cropOrPad, randomAffine and rescale intensity) and loaded the dataloader taking 96 patches from each volume. Model was then passed through a 8 layered (4 doensampling and 4 upsampling) UNet model, whose architecture was being built using pytorch. trilinear model and 2x scale was used for upsampling. 7 epochs were passed, considering the absence of gpu on the system, the model parameters were trained on an AMD Ryzen 5700U cpu with 16GB ram. It took 20 hours to train with the final validation score coming as 0.27. The model was simultaneously also trained upon a similar system,but with rtx 3050 graphics card and 100 epochs were trained and simultaneously logged, which were used for final evaluation. Subsequently, HTML and Camera (from celluloid library) was used for visualization purposes.
